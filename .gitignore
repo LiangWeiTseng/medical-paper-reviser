@@ -1,0 +1,10 @@
+# Input papers and figures (user-specific content, not part of the tool)
+input/*
+!input/.gitkeep
+!input/figures/
+input/figures/*
+!input/figures/.gitkeep
+
+# Output files (generated results)
+output/*
+!output/.gitkeep
