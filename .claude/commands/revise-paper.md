@@ -10,8 +10,8 @@ argument-hint: <paper.docx> [figures_folder]
 ## 預設資料夾設定
 
 ```
-SOURCE_DIR  = C:/Users/LiangWei Tseng/Desktop/TCM_AI_project/medical-paper-reviser/input
-OUTPUT_DIR  = C:/Users/LiangWei Tseng/Desktop/TCM_AI_project/medical-paper-reviser/output
+SOURCE_DIR  = /path/to/medical-paper-reviser/input
+OUTPUT_DIR  = /path/to/medical-paper-reviser/output
 ```
 
 如需更改，直接編輯上方兩行路徑即可。
