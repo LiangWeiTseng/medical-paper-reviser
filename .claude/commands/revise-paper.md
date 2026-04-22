@@ -95,7 +95,7 @@ pandoc "DOCX_PATH" -t plain --wrap=none
 **請選擇輸出格式**：
 
 **[A] 報告** — 輸出 `paper_feedback.docx`（繁體中文 Word 報告）
-**[B] 修訂新檔** — 輸出 `paper_revised.docx`，原檔直接修改，修改處以紅字標示
+**[B] 修訂新檔** — 輸出 `paper_revised.docx`，原檔直接修改另存，修改處以紅字標示
 **[AB] 兩者都要**
 
 ---
