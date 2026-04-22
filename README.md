@@ -8,22 +8,28 @@
 
 ## 快速開始
 
-**第一步 — 安裝套件**
+**第一步 — Clone 專案**
+```bash
+git clone https://github.com/LiangWeiTseng/medical-paper-reviser.git
+cd medical-paper-reviser
+```
+
+**第二步 — 安裝套件**
 ```bash
 pip install python-docx
 ```
 
-**第二步 — 設定路徑**  
+**第三步 — 設定路徑**  
 開啟 [`.claude/commands/revise-paper.md`](.claude/commands/revise-paper.md)，將最上方兩行改為本機的絕對路徑：
 ```
 SOURCE_DIR  = /這台電腦上的絕對路徑/input
 OUTPUT_DIR  = /這台電腦上的絕對路徑/output
 ```
 
-**第三步 — 放入論文**  
+**第四步 — 放入論文**  
 將 `.docx` 放入 `input/`，圖片（選填）放入 `input/figures/`。
 
-**第四步 — 執行**  
+**第五步 — 執行**  
 在此資料夾開啟 Claude Code，輸入：
 ```
 /revise-paper
