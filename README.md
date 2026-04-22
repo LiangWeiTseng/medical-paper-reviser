@@ -6,6 +6,16 @@
 
 ---
 
+## 前置需求
+
+本專案需要 **Claude Code**（Anthropic 官方 CLI）才能使用。  
+若尚未安裝，請先完成以下步驟：
+
+1. 安裝 Claude Code：前往 [claude.ai/code](https://claude.ai/code) 下載
+2. 登入 Claude 帳號（需要 claude.ai Pro/Max 方案或 Anthropic API key）
+
+---
+
 ## 快速開始
 
 **第一步 — Clone 專案**
