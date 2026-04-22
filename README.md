@@ -68,6 +68,12 @@ medical-paper-reviser/
 
 ---
 
+## 範例輸出
+
+![範例改稿報告](examples/1.png)
+
+---
+
 ## 使用方式
 
 在此資料夾開啟 Claude Code，輸入 `/revise-paper`，Claude 會列出 `input/` 內的 `.docx` 供選擇。  

@@ -8,3 +8,8 @@ input/figures/*
 # Output files (generated results)
 output/*
 !output/.gitkeep
+
+# Temporary files
+examples/*.docx
+examples/*.py
+examples/~$*
