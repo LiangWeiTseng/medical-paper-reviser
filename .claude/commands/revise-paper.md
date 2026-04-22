@@ -156,7 +156,7 @@ CHANGES = [
 - **Hedging 不足**：非 RCT 卻說 "X causes Y" → 改為 "X was associated with Y"
 - **Hedging 過度**：每句都加 may/might/possibly
 - **非正式連接詞**：句首 also、but、so → furthermore、however、therefore
-- **縮寫未定義**：首次出現未給完整拼寫
+- **縮寫未定義**：首次出現未給完整拼寫；Abstract 與本文的縮寫定義互相獨立，在 Abstract 中定義過的縮寫，於本文第一次出現時仍需重新定義
 
 輸出格式：
 ```
