@@ -231,6 +231,7 @@ CHANGES = [
 - **圖文對應**：正文是否明確引用每個圖表
 - **表格**：欄位標題是否清楚，單位是否標示
 - **圖片內容**（若有提供）：圖型是否合適、坐標軸/圖例是否清楚、caption 是否與圖吻合
+- **圖說縮寫**：圖說（figure legend）為獨立作用域，其中出現的縮寫應在該圖說內自行定義，不得依賴本文或其他圖說中的定義
 
 輸出格式：
 ```
@@ -273,7 +274,21 @@ CHANGES = [
 - Results 缺少 baseline characteristics 描述
 - Discussion 缺少 limitations 或 conclusion
 
-#### 6b. 投稿必填欄位
+#### 6b. 縮寫清單（List of Abbreviations）
+
+掃描 Abstract、本文、圖說中所有縮寫，整理成清單並檢查：
+- 是否有縮寫在全文僅出現一次（建議直接拼全名，不需縮寫）
+- 是否有縮寫從未在本文中定義
+
+草擬 List of Abbreviations 清單，格式為：
+```
+List of Abbreviations
+XXX: [full term]
+YYY: [full term]
+```
+並說明部分期刊（如 Frontiers、BMC 系列）要求此清單附於論文末尾。
+
+#### 6c. 投稿必填欄位
 
 以下欄位為多數醫學期刊投稿必填，逐一檢查是否存在：
 
