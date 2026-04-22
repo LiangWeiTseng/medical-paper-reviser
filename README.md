@@ -99,7 +99,7 @@ medical-paper-reviser/
 
 | 選項 | 輸出 |
 |------|------|
-| A | `output/paper_feedback.md` — 繁體中文改稿報告 |
+| A | `output/paper_feedback.docx` — 繁體中文改稿報告（Word） |
 | B | `output/paper_revised.docx` — 修改處以紅字標示 |
 | AB | 兩者都輸出 |
 

@@ -94,7 +94,7 @@ pandoc "DOCX_PATH" -t plain --wrap=none
 
 **請選擇輸出格式**：
 
-**[A] 報告** — 輸出 `paper_feedback.md` 至論文同目錄
+**[A] 報告** — 輸出 `paper_feedback.docx`（繁體中文 Word 報告）
 **[B] 修訂新檔** — 輸出 `paper_revised.docx`，所有修改處以紅字標示
 **[AB] 兩者都要**
 
@@ -305,20 +305,60 @@ CHANGES = [
 
 分析完成後，依使用者選擇的輸出格式執行：
 
-### 輸出 [A]：報告 paper_feedback.md
+### 輸出 [A]：報告 paper_feedback.docx
 
-將所有分析結果整理後寫入 `paper_feedback.md`，存至 OUTPUT_DIR。
+將所有分析結果整理後，產生並執行以下 Python 腳本，輸出 Word 報告至 OUTPUT_DIR。
 
-報告開頭固定包含：
+報告第一段固定包含：
 ```
-# 論文改稿報告
-
-- **檔案名稱：** [DOCX_PATH 的檔名]
-- **改稿日期：** [今天日期，格式 YYYY-MM-DD]
-- **改稿項目：** [使用者選擇的項目]
+論文改稿報告
+檔案名稱：[DOCX_PATH 的檔名]
+改稿日期：[今天日期，格式 YYYY-MM-DD]
+改稿項目：[使用者選擇的項目]
 ```
-
 結尾附上 2–3 句中文整體評語與最優先修改建議。
+
+```python
+import re
+import docx
+
+def add_inline(para, text):
+    parts = re.split(r"(\*\*.*?\*\*)", text)
+    for part in parts:
+        if part.startswith("**") and part.endswith("**"):
+            para.add_run(part[2:-2]).bold = True
+        else:
+            para.add_run(part)
+
+doc = docx.Document()
+
+# 每行報告內容（字串列表），由 Claude 在此填入
+FEEDBACK_LINES = [
+]
+
+for line in FEEDBACK_LINES:
+    line = line.rstrip()
+    if line.startswith("# "):
+        doc.add_heading(line[2:], level=1)
+    elif line.startswith("## "):
+        doc.add_heading(line[3:], level=2)
+    elif line.startswith("### "):
+        doc.add_heading(line[4:], level=3)
+    elif line.startswith("> "):
+        add_inline(doc.add_paragraph(style="Quote"), line[2:])
+    elif line.startswith("- ") or line.startswith("* "):
+        add_inline(doc.add_paragraph(style="List Bullet"), line[2:])
+    elif line == "" or line == "---":
+        doc.add_paragraph()
+    else:
+        add_inline(doc.add_paragraph(), line)
+
+output_path = "OUTPUT_DIR/paper_feedback.docx"
+doc.save(output_path)
+print(f"已儲存：{output_path}")
+```
+
+執行後告知使用者檔案路徑。
 
 ### 輸出 [B]：修訂新檔 paper_revised.docx
 
