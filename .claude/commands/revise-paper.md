@@ -204,11 +204,13 @@ CHANGES = [
 - 是否從大背景收斂到 research gap？
 - 是否指出現有知識的不足或矛盾？
 - 結尾是否明確點出 aim / hypothesis？
+- 是否有 contribution statement——說明這篇研究為現有文獻增加了什麼？（可以是 novelty、更大樣本、不同族群、更嚴謹方法學等，不限於 "first study"）
 
 **Methods**
 - 研究設計是否清楚（design、population、inclusion/exclusion criteria）？
 - 是否說明統計方法、軟體、顯著性門檻？
 - 是否提及倫理審查（IRB / ethics approval）？
+- 可重現性（soft check）：Methods 是否提供足夠細節讓他人重現研究？（如 model 版本、資料來源、操作步驟）若有明顯缺漏再提示，不需逐項核查。
 
 **Results**
 - 是否只呈現結果，未混入詮釋？
@@ -221,6 +223,13 @@ CHANGES = [
 - 是否與過去文獻比較並解釋異同？
 - 是否說明 limitations？
 - 是否有 conclusion 及未來研究方向？
+- 若 Discussion 篇幅較長且涵蓋多個主題，可建議考慮加入子章節標題（如 Principal findings、Comparison with literature、Limitations、Implications），以利閱讀；篇幅短的 Discussion 不需要。
+
+**跨章節一致性（soft check）**
+- Introduction 的 aims 是否在 Results 中逐一對應？
+- Conclusion 是否直接回應 aims，不多不少？
+- Abstract 的數字與結論是否與正文一致？
+若有明顯落差再提示，輕微不一致不需特別標記。
 
 **段落層級**
 - 每段是否有主題句？
