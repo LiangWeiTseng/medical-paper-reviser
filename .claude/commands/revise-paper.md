@@ -167,6 +167,12 @@ CHANGES = [
 - **縮寫未定義**：首次出現未給完整拼寫；Abstract 與本文的縮寫定義互相獨立，在 Abstract 中定義過的縮寫，於本文第一次出現時仍需重新定義
 - **統計數值格式**：p 值用大寫 P，等號兩側有空格（`P = 0.032` 或 `P < 0.05`）；信賴區間格式統一（`95% CI: 1.2–3.4`）；平均值需附標準差或標準誤，且全文一致（mean ± SD 或 mean ± SEM，不混用）
 - **藥物名稱**：第一次出現給學名（generic name），之後可用商品名或縮寫；學名首字母小寫
+- **避免 AI 行文特徵**：標記以下常見 AI 寫作模式並建議改寫：
+  - 濫用破折號（em dash）做插入語，改用逗號或子句重組
+  - 堆砌高深詞彙：utilize → use、demonstrate → show、leverage、commence、endeavor 等
+  - 空洞起頭句：It is worth noting that、It is important to highlight that → 直接陳述
+  - 過度對稱的三項列舉：形如 "X, Y, and Z" 每段出現
+  - 固定開場詞：Notably、Importantly、Interestingly 出現過頻
 
 輸出格式：
 ```
